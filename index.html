@@ -16,9 +16,9 @@
 <body>
     <!-- Navbar -->
     <header id="header">
-        <a href="#" class="logo"> <img src="Logos/Written Logo Black.png" alt="F&F"/> </a>
+        <a href="#home" class="logo"> <img src="Logos/Written Logo Black.png" alt="F&F"/> </a>
         <ul>
-            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#">Locations</a></li>
             <li><a href="#">Contact</a></li>
@@ -27,7 +27,7 @@
     </header>
 
     <!-- Parallax -->
-    <section>
+    <section id="home">
         <h2 id="text"> <span>India's Wildlife is beautiful. Help us</span> <br> Reserve It </h2>
         <img src="Parallax/Bird1.png" id="bird1">
         <img src="Parallax/Bird2.png" id="bird2">
@@ -47,9 +47,8 @@
             <br><br>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero optio architecto nihil maxime iste accusamus quis odit obcaecati officiis veniam. Voluptas dignissimos nobis distinctio! Alias, accusamus. Praesentium corporis dolorem quae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione sed maxime tempore blanditiis eum nostrum facere ducimus in minima est optio mollitia quam suscipit, ullam delectus libero necessitatibus veniam, nulla explicabo. Officia, expedita? Incidunt quibusdam reiciendis inventore, omnis libero, expedita facere facilis repellat porro nulla, doloremque distinctio laboriosam illum iusto?
             <br><br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur sunt iste nostrum veniam! Est quos expedita aut, at dolorum quisquam perferendis, sed quas veritatis alias dicta ipsum laborum? Ratione molestiae, laboriosam molestias ducimus omnis voluptatem alias minus esse facilis dolores perferendis veniam ut, consequuntur dolorem quidem officia, maiores reprehenderit qui veritatis. Enim placeat unde impedit eos dolore ipsam rerum ipsum, alias ea tempore quo velit ipsa repellat? Placeat, est?
-            <br><br>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero optio architecto nihil maxime iste accusamus quis odit obcaecati officiis veniam. Voluptas dignissimos nobis distinctio! Alias, accusamus. Praesentium corporis dolorem quae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem perferendis atque porro in molestias optio fugiat doloremque, voluptatum nobis, autem eius molestiae tempore. Explicabo optio repellendus, harum corporis fugit quos tenetur animi quod dolores officiis magnam tempore porro illo nihil eos. Voluptate laborum temporibus assumenda ullam mollitia corrupti eum aliquam veritatis ea, ut nobis sequi cumque libero illum rem reiciendis quae consequuntur omnis labore quo accusantium nostrum eos eaque. Itaque libero, quae enim veniam rem deserunt explicabo iure consequatur laboriosam?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero optio architecto nihil maxime iste accusamus quis odit obcaecati officiis veniam. Voluptas dignissimos nobis distinctio! Alias, accusamus. Praesentium corporis dolorem quae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem perferendis atque porro in molestias optio fugiat doloremque, voluptatum nobis, autem eius molestiae tempore. Explicabo optio repellendus, harum corporis fugit quos tenetur animi quod dolores officiis magnam tempore porro illo nihil eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?
+            <br><br><br>
         </p>
     </div>
 
@@ -59,6 +58,7 @@
     </footer>
 
     <script>
+        // References to all the images
         let text = document.getElementById("text");
         let bird1 = document.getElementById("bird1");
         let bird2 = document.getElementById("bird2");
@@ -66,12 +66,12 @@
         let btn = document.getElementById("btn");
         let rocks = document.getElementById("rocks");
         let water = document.getElementById("water");
-        let header = document.getElementById("header");
 
+        // Parallax
         window.addEventListener('scroll', function() {
             let value = window.scrollY;
             
-            text.style.top = "1em" +(value * -0.5) + '%';
+            text.style.top = "1.15em" +(value * -0.5) + '%';
             bird1.style.top = (value * -1.5) + 'px';
             bird1.style.left = (value * 2) + 'px';
             bird2.style.top = (value * -1.5) + 'px';
@@ -79,7 +79,6 @@
             btn.style.marginTop =( value * 1.5) + 'px';
             rocks.style.top = (value * -0.12) + 'px';
             forest.style.top = (value * 0.25) + 'px';
-            header.style.top = (value * -0.5) + 'px';
         })
     </script>
 </body>
