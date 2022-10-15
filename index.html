@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic header tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora & Fauna</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/index.css">
+
+    <!-- Title logo -->
+    <link rel = "icon" href = "Logos/Logo Orange.png" type = "image/x-icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <header id="header">
+        <a href="#" class="logo"> <img src="Logos/Written Logo Black.png" alt="F&F"/> </a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="HTML/credits.html">Credits</a></li>
+        </ul>
+    </header>
+
+    <!-- Parallax -->
+    <section>
+        <h2 id="text"> <span>India's Wildlife is beautiful. Help us</span> <br> Reserve It </h2>
+        <img src="Parallax/Bird1.png" id="bird1">
+        <img src="Parallax/Bird2.png" id="bird2">
+        <img src="Parallax/Forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="Parallax/Rocks.png" id="rocks">
+        <img src="Parallax/Water.png" id="water">
+    </section>
+
+    <!-- About -->
+    <div class="sec" id="about">
+        <h2>About <img src="Logos/Full Name Logo White.png"> </h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione sed maxime tempore blanditiis eum nostrum facere ducimus in minima est optio mollitia quam suscipit, ullam delectus libero necessitatibus veniam, nulla explicabo. Officia, expedita? Incidunt quibusdam reiciendis inventore, omnis libero, expedita facere facilis repellat porro nulla, doloremque distinctio laboriosam illum iusto?
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur sunt iste nostrum veniam! Est quos expedita aut, at dolorum quisquam perferendis, sed quas veritatis alias dicta ipsum laborum? Ratione molestiae, laboriosam molestias ducimus omnis voluptatem alias minus esse facilis dolores perferendis veniam ut, consequuntur dolorem quidem officia, maiores reprehenderit qui veritatis. Enim placeat unde impedit eos dolore ipsam rerum ipsum, alias ea tempore quo velit ipsa repellat? Placeat, est?
+            <br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero optio architecto nihil maxime iste accusamus quis odit obcaecati officiis veniam. Voluptas dignissimos nobis distinctio! Alias, accusamus. Praesentium corporis dolorem quae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione sed maxime tempore blanditiis eum nostrum facere ducimus in minima est optio mollitia quam suscipit, ullam delectus libero necessitatibus veniam, nulla explicabo. Officia, expedita? Incidunt quibusdam reiciendis inventore, omnis libero, expedita facere facilis repellat porro nulla, doloremque distinctio laboriosam illum iusto?
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur sunt iste nostrum veniam! Est quos expedita aut, at dolorum quisquam perferendis, sed quas veritatis alias dicta ipsum laborum? Ratione molestiae, laboriosam molestias ducimus omnis voluptatem alias minus esse facilis dolores perferendis veniam ut, consequuntur dolorem quidem officia, maiores reprehenderit qui veritatis. Enim placeat unde impedit eos dolore ipsam rerum ipsum, alias ea tempore quo velit ipsa repellat? Placeat, est?
+            <br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero optio architecto nihil maxime iste accusamus quis odit obcaecati officiis veniam. Voluptas dignissimos nobis distinctio! Alias, accusamus. Praesentium corporis dolorem quae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem perferendis atque porro in molestias optio fugiat doloremque, voluptatum nobis, autem eius molestiae tempore. Explicabo optio repellendus, harum corporis fugit quos tenetur animi quod dolores officiis magnam tempore porro illo nihil eos. Voluptate laborum temporibus assumenda ullam mollitia corrupti eum aliquam veritatis ea, ut nobis sequi cumque libero illum rem reiciendis quae consequuntur omnis labore quo accusantium nostrum eos eaque. Itaque libero, quae enim veniam rem deserunt explicabo iure consequatur laboriosam?
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Created by Students of P.B. Academic School, Class XI <span>All rights reserved &copy;</span>
+    </footer>
+
+    <script>
+        let text = document.getElementById("text");
+        let bird1 = document.getElementById("bird1");
+        let bird2 = document.getElementById("bird2");
+        let forest = document.getElementById("forest");
+        let btn = document.getElementById("btn");
+        let rocks = document.getElementById("rocks");
+        let water = document.getElementById("water");
+        let header = document.getElementById("header");
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            
+            text.style.top = "1em" +(value * -0.5) + '%';
+            bird1.style.top = (value * -1.5) + 'px';
+            bird1.style.left = (value * 2) + 'px';
+            bird2.style.top = (value * -1.5) + 'px';
+            bird2.style.left = (value * -2) + 'px';
+            btn.style.marginTop =( value * 1.5) + 'px';
+            rocks.style.top = (value * -0.12) + 'px';
+            forest.style.top = (value * 0.25) + 'px';
+            header.style.top = (value * -0.5) + 'px';
+        })
+    </script>
+</body>
+</html>
