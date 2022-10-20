@@ -18,8 +18,8 @@
     <header id="header">
         <a href="#home" class="logo"> <img src="Logos/Written Logo Black.png" alt="F&F"/> </a>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#">Explore</a></li>
             <li><a href="#">Locations</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="HTML/credits.html">Credits</a></li>
@@ -28,7 +28,7 @@
 
     <!-- Parallax -->
     <section id="home">
-        <h2 id="text"> <span>India's Wildlife is beautiful. Help us</span> <br> Reserve It </h2>
+        <h2 id="text"> <span>India's Wildlife is beautiful. Help us</span> <br> Preserve It </h2>
         <img src="Parallax/Bird1.png" id="bird1">
         <img src="Parallax/Bird2.png" id="bird2">
         <img src="Parallax/Forest.png" id="forest">
@@ -71,7 +71,7 @@
         window.addEventListener('scroll', function() {
             let value = window.scrollY;
             
-            text.style.top = "1.15em" +(value * -0.5) + '%';
+            text.style.top = "0.9em" +(value * -0.5) + '%';
             bird1.style.top = (value * -1.5) + 'px';
             bird1.style.left = (value * 2) + 'px';
             bird2.style.top = (value * -1.5) + 'px';
