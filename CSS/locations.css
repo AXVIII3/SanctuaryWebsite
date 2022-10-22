@@ -188,6 +188,9 @@ section#locationLeft div h1 {
 
 section#locationLeft div p {
     margin-right: 15px;
+    padding: 7px;
+    padding-top: 0;
+    transform: translateY(-4px);
 }
 
 section#locationLeft img {
