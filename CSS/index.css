@@ -142,10 +142,14 @@ section #text span {
 .sec {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     padding: 100px;
     background: #094b65;
+}
+
+.sec div {
+    width: 50%;
 }
 
 .sec h2 {
@@ -157,7 +161,6 @@ section #text span {
 .sec p {
     font-size: 1em;
     color: white;
-    width: 50%;
 }
 
 .sec #mainPic {
