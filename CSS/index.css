@@ -141,6 +141,9 @@ section #text span {
 
 .sec {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 100px;
     background: #094b65;
 }
