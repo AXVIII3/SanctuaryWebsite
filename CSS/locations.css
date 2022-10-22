@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+/* Basic CSS Defaulting */
 * {
     margin: 0;
     padding: 0;
@@ -17,8 +18,10 @@ body {
     overflow-x: hidden;
     background: #ffffff;
     min-height: 100vh;
+    scroll-snap-type: y mandatory;
 }
 
+/* Navbar */
 #header {
     position: fixed;
     top: 0;
@@ -67,78 +70,109 @@ body {
 #header ul li a.active
 {
     background: #fff;
-    color: black;
+    color: #094b65;
 }
 
-section#location1 {
+/* Background */
+#bg {
+    position: fixed;
+    width: 100%;
+    height: auto;
+}
+
+section#space {
+    height: 130px;
+    width: 100%;
+}
+section#space2 {
+    height: 40px;
+    width: 100%;
+}
+
+/* Basic Structure for each location */
+section#locationRight {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #094b65 0%, #094b65 40%, transparent 100%), url(../Images/TigerPic.jpg);
 }
 
-section#location1 div {
+section#locationRight div {
+    padding-left: 14px;
     position: absolute;
     left: 3em;
-    width: 50%;
+    width: 45%;
     color: white;
 }
 
-section::before {
-    content: '';
+section#locationRight img {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(to top, #094b65, transparent);
-    z-index: 15;
+    right: 3em;
+    width: 37em;
+    height: auto;
 }
 
-section::after {
+section#locationRight div::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(to bottom, #094b65, transparent);
-    z-index: 15;
+    width: 5px;
+    height: 60%;
+    background: #094b65;
 }
 
-section#location2 {
+section#locationLeft {
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, #094b65 0%, #094b65 40%, transparent 100%), url(../Images/TigerPic2.jpg);
 }
-/* 35% */
 
-section#location2 div {
+section#locationLeft div {
+    padding-right: 14px;
     position: absolute;
     right: 3em;
-    width: 50%;
+    width: 45%;
     color: white;
     text-align: right;
 }
 
-footer {
+section#locationLeft img {
+    position: absolute;
+    left: 3em;
+    width: 37em;
+    height: auto;
+}
+
+section#locationLeft div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 60%;
+    background: #094b65;
+}
+
+/* Footer */
+#footer {
+    position: relative;
+    margin-top: 38px;;
     min-height: 40px;
-    padding: 10px 30px;
+    width: 100%;
+    padding-left: 20px;
     display: flex;
     align-items: center;
     justify-content: left;
-    background: #094b65;
     color: white;
 }
 
-footer span {
+#footer span {
     position: absolute;
     right: 30px;
 }

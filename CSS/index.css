@@ -154,6 +154,13 @@ section #text span {
 .sec p {
     font-size: 1em;
     color: white;
+    width: 50%;
+}
+
+.sec #mainPic {
+    position: absolute;
+    right: 3em;
+    top: 0;
 }
 
 footer {

@@ -13,6 +13,9 @@
     <!-- JS -->
     <script defer src="JS/index.js"></script>
 
+    <!-- Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Title logo -->
     <link rel = "icon" href = "Logos/Logo Orange.png" type = "image/x-icon">
 </head>
@@ -42,22 +45,32 @@
 
     <!-- About -->
     <div class="sec" id="about">
-        <h2>About <img src="Logos/Full Name Logo White.png"> </h2>
-        <p>
+        <h2 data-aos="fade-in">About <img src="Logos/Full Name Logo White.png" data-aos="fade-in"> </h2>
+        <p data-aos="fade-in">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione sed maxime tempore blanditiis eum nostrum facere ducimus in minima est optio mollitia quam suscipit, ullam delectus libero necessitatibus veniam, nulla explicabo. Officia, expedita? Incidunt quibusdam reiciendis inventore, omnis libero, expedita facere facilis repellat porro nulla, doloremque distinctio laboriosam illum iusto?
             <br><br>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur sunt iste nostrum veniam! Est quos expedita aut, at dolorum quisquam perferendis, sed quas veritatis alias dicta ipsum laborum? Ratione molestiae, laboriosam molestias ducimus omnis voluptatem alias minus esse facilis dolores perferendis veniam ut, consequuntur dolorem quidem officia, maiores reprehenderit qui veritatis. Enim placeat unde impedit eos dolore ipsam rerum ipsum, alias ea tempore quo velit ipsa repellat? Placeat, est?
             <br><br>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero optio architecto nihil maxime iste accusamus quis odit obcaecati officiis veniam. Voluptas dignissimos nobis distinctio! Alias, accusamus. Praesentium corporis dolorem quae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione sed maxime tempore blanditiis eum nostrum facere ducimus in minima est optio mollitia quam suscipit, ullam delectus libero necessitatibus veniam, nulla explicabo. Officia, expedita? Incidunt quibusdam reiciendis inventore, omnis libero, expedita facere facilis repellat porro nulla, doloremque distinctio laboriosam illum iusto?
-            <br><br>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero optio architecto nihil maxime iste accusamus quis odit obcaecati officiis veniam. Voluptas dignissimos nobis distinctio! Alias, accusamus. Praesentium corporis dolorem quae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem perferendis atque porro in molestias optio fugiat doloremque, voluptatum nobis, autem eius molestiae tempore. Explicabo optio repellendus, harum corporis fugit quos tenetur animi quod dolores officiis magnam tempore porro illo nihil eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?
-            <br><br><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero optio architecto nihil maxime iste accusamus quis odit obcaecati officiis veniam. Voluptas dignissimos nobis distinctio! Alias, accusamus. Praesentium corporis dolorem quae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione sed maxime tempore blanditiis eum nostrum facere ducimus in minima est optio mollitia quam.
         </p>
+        <img src="Images/Elephants.png" id="mainPic" data-aos="fade-in">
     </div>
 
     <!-- Footer -->
     <footer>
         Created by Students of P.B. Academic School, Class XI <span>All rights reserved &copy;</span>
     </footer>
+
+    <!-- AOS Animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 1000,
+        easing: 'ease-in-out',
+        mirror: false,
+        once: true
+      });
+    </script>
 </body>
 </html>
