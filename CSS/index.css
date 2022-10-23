@@ -72,14 +72,14 @@ body {
     text-decoration: none; 
     transition: ease-in-out 0.2s;
     padding: 6px 15px;
-    color: #094b65;
+    color: black;
     border-radius: 20px;
 }
 
 #header ul li a:hover,
 #header ul li a.active
 {
-    background: #094b65;
+    background: black;
     color: white;
 }
 
