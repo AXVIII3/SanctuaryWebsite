@@ -34,6 +34,17 @@ body {
     background-color: white;
 }
 
+/* Text Selection */
+::-moz-selection { 
+    color: white;
+    background: #094b65;
+  }
+  
+  ::selection {
+    color: white;
+    background: #094b65;
+  }
+
 /* Navbar */
 #header {
     position: fixed;
@@ -102,6 +113,22 @@ hr {
     color: white;
 }
 
+a#backtotop {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    bottom: 50px;
+    text-align: center;
+    width: 110px;
+    height: 40px;
+    background-color: #094b65;
+    color: white;
+    box-shadow: -1px 3px 1px 1px rgba(0, 0, 0, 0.457);
+    z-index: 1000;
+}
+
 /* Basic Structure for each location */
 /* Locations Landing */
 section#landing {
@@ -122,6 +149,10 @@ section#landing div.content {
 
 section#landing div.content h1 {
     font-size: 3.5em;
+}
+
+section#landing div.content h1 span{
+    color: #094b65;
 }
 
 section#landing div.content p {
