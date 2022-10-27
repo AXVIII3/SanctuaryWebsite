@@ -213,14 +213,20 @@
         // For abstract square animation
         let container = document.querySelector('.container');
 
-        for (let i = 0; i < 10; i++)
+        let k = 1;
+        for (let i = 0; i < 5; i++)
         {
-            for (let j = 0; j < 10; j++)
+            for (let j = 0; j < 5; j++)
             {
                 let dot = document.createElement('div');
                 dot.classList.add('element');
                 if ((i % 2 != 0) && (j % 2 == 0)) dot.classList.add('element2');
-                if ((i % 2 == 0) && (j % 2 != 0)) dot.classList.add('element2');
+                else if ((i % 2 == 0) && (j % 2 != 0)) dot.classList.add('element2');
+                else 
+                { 
+                    dot.classList.add('pic' + k);
+                    k++;
+                }
                 container.appendChild(dot);
             }
         }
@@ -231,13 +237,12 @@
             targets: dotAll,
             easing: 'easeInOutExpo',
             loop: true,
-            delay: anime.stagger(100, {grid: [10, 10], from: 'center'})
+            delay: anime.stagger(100, {grid: [5, 5], from: 'center'})
         });
 
         animation.add({
-            rotateZ: 180,
-            translateY: anime.stagger(-10, {grid: [10, 10], from: 'center', axis:'y'}),
-            translateX: anime.stagger(-10, {grid: [10, 10], from: 'center', axis:'x'}),
+            translateY: anime.stagger(-10, {grid: [5, 5], from: 'center', axis:'y'}),
+            translateX: anime.stagger(-10, {grid: [5, 5], from: 'center', axis:'x'}),
             opacity: 1
         }).add({
             borderRadius: 50
@@ -247,15 +252,12 @@
         })
         
         animation.add({
-            rotateZ: 180,
-            translateY: anime.stagger(0, {grid: [10, 10], from: 'center', axis:'y'}),
-            translateX: anime.stagger(0, {grid: [10, 10], from: 'center', axis:'x'}),
+            translateY: anime.stagger(0, {grid: [5, 5], from: 'center', axis:'y'}),
+            translateX: anime.stagger(0, {grid: [5, 5], from: 'center', axis:'x'}),
             opacity: 1
         }).add({
             scale: 1,
             borderRadius: 0
-        }).add({
-            rotateZ: -90
         });
 
         // Loader

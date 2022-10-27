@@ -507,10 +507,62 @@ section#landing div.container {
 
 section#landing div.container div.element {
     position: relative;
-    width: 35px;
-    height: 35px;
-    background: white;
-    scale: 0.75;
+    width: 70px;
+    height: 70px;
+    scale: 0.8;
+}
+
+section#landing div.container div.pic1 {
+    background: url(../Images/Animals500x500/1.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic2 {
+    background: url(../Images/Animals500x500/2.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic3 {
+    background: url(../Images/Animals500x500/3.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic4 {
+    background: url(../Images/Animals500x500/4.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic5 {
+    background: url(../Images/Animals500x500/6.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic6 {
+    background: url(../Images/Animals500x500/7.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic7 {
+    background: url(../Images/Animals500x500/8.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic8 {
+    background: url(../Images/Animals500x500/9.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic9 {
+    background: url(../Images/Animals500x500/10.jpg);
+    background-size: contain;
+}  
+section#landing div.container div.pic10 {
+    background: url(../Images/Animals500x500/11.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic11 {
+    background: url(../Images/Animals500x500/12.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic12 {
+    background: url(../Images/Animals500x500/13.jpg);
+    background-size: contain;
+}
+section#landing div.container div.pic13 {
+    background: url(../Images/Animals500x500/5.jpg);
+    background-size: contain;
 }
 
 section#landing div.container div.element2 {
