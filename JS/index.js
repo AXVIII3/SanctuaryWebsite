@@ -20,3 +20,10 @@ window.addEventListener('scroll', function() {
     rocks.style.top = (value * -0.12) + 'px';
     forest.style.top = (value * 0.25) + 'px';
 })
+
+// Loader
+var loader = document.getElementById('loader');
+window.addEventListener("load", function() {
+    loader.style.display = 'none';
+    document.getElementById('body').style.overflowY = 'scroll';
+});

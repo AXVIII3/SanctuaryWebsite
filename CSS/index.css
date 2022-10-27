@@ -15,6 +15,7 @@ html {
 
 body {
     overflow-x: hidden;
+    overflow-y: hidden;
     background: #ffffff;
     min-height: 100vh;
 }
@@ -81,6 +82,243 @@ body {
 {
     background: #094b65;
     color: white;
+}
+
+/* Loader */
+section#loader {
+    width: 100vw;
+    height: 100vh;
+}
+
+section#loader div.loader {
+    background-color: #094b65;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.squares {
+    display: flex;
+    margin: auto;
+    width: 44px;
+    height: 44px;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.sq1, .sq2, .sq3, .sq4 {
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    display: flex;
+}
+
+.pair1 {
+    display: flex;
+    position: relative;
+    gap: 2px;
+    flex-direction: column;
+}
+
+.pair2 {
+    display: flex;
+    position: relative;
+    gap: 2px;
+    flex-direction: column;
+}
+
+.sq1 {
+    animation-name: sq1loader;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+.sq2 {
+    animation-name: sq2loader;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    
+}
+
+.sq3 {
+    animation-name: sq3loader;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    
+}
+
+.sq4 {
+    animation-name: sq4loader;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    
+}
+
+@keyframes sq1loader {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    12% {
+        left: 0;
+        top: -22px;    
+    }
+    25% {
+        left: 11px;
+        top: -22px;
+    }
+    37% {
+        left: 22px;
+        top: -22px;
+    }
+    50% {
+        left: 22px;
+        top: 0px;
+    }
+    62% {
+        left: 22px;
+        top: 22px;
+    }
+    75% {
+        left: 11px;
+        top: 22px
+    }
+    87% {
+        left: 11px;
+        top: 11px;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes sq3loader {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    12% {
+        left: 0;
+        top: -22px;    
+    }
+    25% {
+        left: 11px;
+        top: -22px;
+    }
+    37% {
+        left: 22px;
+        top: -22px;
+    }
+    50% {
+        left: 22px;
+        top: 0px;
+    }
+    62% {
+        left: 22px;
+        top: 22px;
+    }
+    75% {
+        left: 11px;
+        top: 22px
+    }
+    87% {
+        left: 11px;
+        top: -11px;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes sq2loader {
+    0% {
+        right: 0;
+        top: 0;
+    }
+    12% {
+        right: 0;
+        top: 22px;    
+    }
+    25% {
+        right: 11px;
+        top: 22px;
+    }
+    37% {
+        right: 22px;
+        top: 22px;
+    }
+    50% {
+        right: 22px;
+        top: 0;
+    }
+    62% {
+        right: 22px;
+        top: -22px;
+    }
+    75% {
+        right: 11px;
+        top: -22px
+    }
+    87% {
+        right: 11px;
+        top: 11px;
+    }
+    100% {
+        right: 0;
+        top: 0;
+    }
+}
+
+@keyframes sq4loader {
+    0% {
+        right: 0;
+        top: 0;
+    }
+    12% {
+        right: 0;
+        top: 22px;    
+    }
+    25% {
+        right: 11px;
+        top: 22px;
+    }
+    37% {
+        right: 22px;
+        top: 22px;
+    }
+    50% {
+        right: 22px;
+        top: 0;
+    }
+    62% {
+        right: 22px;
+        top: -22px;
+    }
+    75% {
+        right: 11px;
+        top: -22px
+    }
+    87% {
+        right: 11px;
+        top: -11px;
+    }
+    /* 96% {
+        right: -4px;
+        top: -4px;
+    } */
+    100% {
+        right: 0;
+        top: 0;
+    }
 }
 
 section {

@@ -19,7 +19,23 @@
     <link rel = "icon" href = "../Logos/Logo White.png" type = "image/x-icon">
 
 </head>
-<body>
+<body id="body">
+    <!-- Loader -->
+    <section id="loader">
+        <div class="loader">
+            <div class="squares">
+                <div class="pair1">
+                    <div class="sq1"></div>
+                    <div class="sq3"></div>
+                </div>
+                <div class="pair2">
+                    <div class="sq2"></div>
+                    <div class="sq4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- BG -->
     <img src="../Images/Locations/LocationsBG.jpg" id="bg">
 
@@ -160,7 +176,7 @@
             <img src="../Images/Locations/Sundarban.png" data-aos="fade-in">
         </div>
     </section>
-
+    
     <hr>
 
     <br><br><br><br>
@@ -232,6 +248,13 @@
             borderRadius: 0
         }).add({
             rotateZ: -90
+        });
+
+        // Loader
+        var loader = document.getElementById('loader');
+        window.addEventListener("load", function() {
+            loader.style.display = 'none';
+            document.getElementById('body').style.overflowY = 'scroll';
         });
     </script>
 </body>
