@@ -343,10 +343,6 @@ section#loader div.loader {
         right: 11px;
         top: -11px;
     }
-    /* 96% {
-        right: -4px;
-        top: -4px;
-    } */
     100% {
         right: 0;
         top: 0;
