@@ -100,6 +100,78 @@ body#body {
     color: #094b65;
 }
 
+/* Splash Screen */
+section#splash {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 900000;
+}
+
+section#splash div#intro {
+    background-color: #094b65;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+section#splash div#intro img#logo {
+    position: relative;
+    width: 50px;
+    height: auto;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+}
+
+section#splash div#intro img#logoGraphic {
+    position: relative;
+    width: 50px;
+    height: auto;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        margin-bottom: 0;
+        display: inline;
+    }
+    50% {
+        opacity: 1;
+        margin-bottom: 0;
+        display: inline;
+    }
+    100% {
+        opacity: 0;
+        margin-bottom: 800px;
+        display: none;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 0;
+    }
+    100% {
+        top: -100vh;
+    }
+}
+
 /* Background */
 #bg {
     position: fixed;
