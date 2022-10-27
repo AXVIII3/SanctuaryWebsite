@@ -175,9 +175,9 @@ section#splash div#intro img#logoGraphic {
 /* Background */
 #bg {
     position: fixed;
-    width: 100%;
-    height: auto;
-    filter: blur(5px);
+    width: 100vw;
+    height: 100vh;
+    filter: blur(3px);
     scale: 1.1;
 }
 
@@ -437,6 +437,10 @@ a#backtotop {
     z-index: 1000;
 }
 
+a#backtotop:hover {
+    text-decoration: underline;
+}
+
 /* Basic Structure for each location */
 /* Locations Landing */
 section#landing {
@@ -449,8 +453,26 @@ section#landing {
     gap: 100px;
 }
 
+section#landing div#parent {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    padding: 2em 3em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.381);
+    background: #094b6546; 
+}
+
 section#landing div.content {
     color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: center;
     min-width: 600px;
     height: 100%;
 }
@@ -464,7 +486,7 @@ section#landing div.content h1 span{
 }
 
 section#landing div.content p {
-    color: #d9d9d9;
+    color: #ffffff;
     margin-top: 1.5em;
     font-size: 1.3em;
 }
@@ -477,21 +499,7 @@ section#landing div.content div {
     flex-wrap: wrap;
     align-items: center;
     justify-content: baseline;
-}
-
-section#landing div.content div a {
-    color: white;
-    margin: 5px;
-    background-color: #094b65;
-    border-radius: 7px;
-    padding: 10px;
-    font-size: 1.2em;
-    transition: 0.5s ease-in-out;
-}
-
-section#landing div.content div a:hover {
-    color: #094b65;
-    background-color: white;
+    gap: 5px;
 }
 
 section#landing div.container {
@@ -685,20 +693,47 @@ section.locationLeft div.container::before {
 }
 
 a#more {
-   position: relative;
-   height: 40px; 
-   width: 100%;
    margin-left: 45vw;
-   padding: 15px;
-   border-radius: 5px;
-   color: white;
-   background-color: #094b65;
-   transition: 0.5s ease-in-out;
 }
 
-a#more:hover {
+/* Buttons */
+.btn {
+    position: relative;
+    display: inline-flex;
+    padding: 10px 30px;
+    background: #094b65;
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: color 0.5s;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: white;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover {
     color: #094b65;
-    background-color: white;
+}
+
+.btn:hover::before {
+    width: 500px;
+    height: 500px;
 }
 
 /* Footer */
