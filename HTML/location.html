@@ -9,11 +9,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/locations.css">
 
-    <!-- JS -->
-    <script defer src="../JS/location.js"></script>
-
     <!-- Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- JS -->
+    <script src="../JS/location.js" defer></script>
 
     <!-- Title logo -->
     <link rel = "icon" href = "../Logos/Logo White.png" type = "image/x-icon">
@@ -54,7 +54,7 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="#">Explore</a></li>
             <li><a href="location.html" class="active">Locations</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="../HTML/contact.html">Contact</a></li>
             <li><a href="#">About Us</a></li>
         </ul>
     </header>
@@ -212,80 +212,36 @@
             once: true
         });
 
-        // For abstract square animation
-        let container = document.querySelector('.container');
+        // Landing page animation
+        window.addEventListener('load', function () {
+            let dotAll = document.querySelectorAll('.element');
+            let animation = anime.timeline({
+                targets: dotAll,
+                easing: 'easeInOutExpo',
+                loop: true,
+                delay: anime.stagger(100, {grid: [5, 5], from: 'center'})
+            });
 
-        let k = 1;
-        for (let i = 0; i < 5; i++)
-        {
-            for (let j = 0; j < 5; j++)
-            {
-                let dot = document.createElement('div');
-                dot.classList.add('element');
-                if ((i % 2 != 0) && (j % 2 == 0)) dot.classList.add('element2');
-                else if ((i % 2 == 0) && (j % 2 != 0)) dot.classList.add('element2');
-                else 
-                { 
-                    dot.classList.add('pic' + k);
-                    k++;
-                }
-                container.appendChild(dot);
-            }
-        }
-
-        let dotAll = document.querySelectorAll('.element');
-
-        let animation = anime.timeline({
-            targets: dotAll,
-            easing: 'easeInOutExpo',
-            loop: true,
-            delay: anime.stagger(100, {grid: [5, 5], from: 'center'})
+            animation.add({
+                translateY: anime.stagger(-10, {grid: [5, 5], from: 'center', axis:'y'}),
+                translateX: anime.stagger(-10, {grid: [5, 5], from: 'center', axis:'x'}),
+                opacity: 1
+            }).add({
+                borderRadius: 50
+            }).add({
+                scale: 0.2,
+                opacity: 0.2
+            })
+            
+            animation.add({
+                translateY: anime.stagger(0, {grid: [5, 5], from: 'center', axis:'y'}),
+                translateX: anime.stagger(0, {grid: [5, 5], from: 'center', axis:'x'}),
+                opacity: 1
+            }).add({
+                scale: 1,
+                borderRadius: 0
+            }); 
         });
-
-        animation.add({
-            translateY: anime.stagger(-10, {grid: [5, 5], from: 'center', axis:'y'}),
-            translateX: anime.stagger(-10, {grid: [5, 5], from: 'center', axis:'x'}),
-            opacity: 1
-        }).add({
-            borderRadius: 50
-        }).add({
-            scale: 0.2,
-            opacity: 0.2
-        })
-        
-        animation.add({
-            translateY: anime.stagger(0, {grid: [5, 5], from: 'center', axis:'y'}),
-            translateX: anime.stagger(0, {grid: [5, 5], from: 'center', axis:'x'}),
-            opacity: 1
-        }).add({
-            scale: 1,
-            borderRadius: 0
-        });
-
-        // Loader
-        var loader = document.getElementById('loader');
-
-        // Splash Screen
-        var splash = document.getElementById('splash');
-        var intro = document.getElementById('intro');
-        var logo = document.getElementById('logo');
-        var logoGraphic = document.getElementById('logoGraphic');
-
-        window.addEventListener("load", function() {
-            loader.style.display = 'none';
-            splash.style.height = '100vh';
-            intro.style.display = 'flex';
-            logo.style.animationName = 'fadeUp';
-            logoGraphic.style.animationName = 'fadeUp';
-            intro.style.animationName = 'slideUp';
-            setInterval(deactivateSplash, 1500);
-        });
-
-        function deactivateSplash() {
-            splash.style.height = '0';
-            intro.style.display = 'none';
-            document.getElementById('body').style.overflowY = 'scroll';
-        }
     </script>
 </body>
 </html>

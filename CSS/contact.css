@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* Basic CSS Defaulting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+    background: #ffffff;
+    min-height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #094b65;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+/* Text Selection */
+::-moz-selection { 
+    color: white;
+    background: #094b65;
+  }
+  
+::selection {
+    color: white;
+    background: #094b65;
+}
+
+  /* Splash Screen */
+section#splash {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 900000;
+}
+
+section#splash div#intro {
+    background-color: #094b65;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+section#splash div#intro img#logo {
+    position: relative;
+    width: 50px;
+    height: auto;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+}
+
+section#splash div#intro img#logoGraphic {
+    position: relative;
+    width: 50px;
+    height: auto;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        margin-bottom: 0;
+        display: inline;
+    }
+    50% {
+        opacity: 1;
+        margin-bottom: 0;
+        display: inline;
+    }
+    100% {
+        opacity: 0;
+        margin-bottom: 800px;
+        display: none;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 0;
+    }
+    100% {
+        top: -100vh;
+    }
+}
+
+/* Loader */
+section#loader {
+    width: 100vw;
+    height: 100vh;
+}
+
+section#loader div.loader {
+    background-color: #094b65;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.squares {
+    display: flex;
+    margin: auto;
+    width: 44px;
+    height: 44px;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.sq1, .sq2, .sq3, .sq4 {
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    display: flex;
+}
+
+.pair1 {
+    display: flex;
+    position: relative;
+    gap: 2px;
+    flex-direction: column;
+}
+
+.pair2 {
+    display: flex;
+    position: relative;
+    gap: 2px;
+    flex-direction: column;
+}
+
+.sq1 {
+    animation-name: sq1loader;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+.sq2 {
+    animation-name: sq2loader;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    
+}
+
+.sq3 {
+    animation-name: sq3loader;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    
+}
+
+.sq4 {
+    animation-name: sq4loader;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    
+}
+
+@keyframes sq1loader {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    12% {
+        left: 0;
+        top: -22px;    
+    }
+    25% {
+        left: 11px;
+        top: -22px;
+    }
+    37% {
+        left: 22px;
+        top: -22px;
+    }
+    50% {
+        left: 22px;
+        top: 0px;
+    }
+    62% {
+        left: 22px;
+        top: 22px;
+    }
+    75% {
+        left: 11px;
+        top: 22px
+    }
+    87% {
+        left: 11px;
+        top: 11px;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes sq3loader {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    12% {
+        left: 0;
+        top: -22px;    
+    }
+    25% {
+        left: 11px;
+        top: -22px;
+    }
+    37% {
+        left: 22px;
+        top: -22px;
+    }
+    50% {
+        left: 22px;
+        top: 0px;
+    }
+    62% {
+        left: 22px;
+        top: 22px;
+    }
+    75% {
+        left: 11px;
+        top: 22px
+    }
+    87% {
+        left: 11px;
+        top: -11px;
+    }
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes sq2loader {
+    0% {
+        right: 0;
+        top: 0;
+    }
+    12% {
+        right: 0;
+        top: 22px;    
+    }
+    25% {
+        right: 11px;
+        top: 22px;
+    }
+    37% {
+        right: 22px;
+        top: 22px;
+    }
+    50% {
+        right: 22px;
+        top: 0;
+    }
+    62% {
+        right: 22px;
+        top: -22px;
+    }
+    75% {
+        right: 11px;
+        top: -22px
+    }
+    87% {
+        right: 11px;
+        top: 11px;
+    }
+    100% {
+        right: 0;
+        top: 0;
+    }
+}
+
+@keyframes sq4loader {
+    0% {
+        right: 0;
+        top: 0;
+    }
+    12% {
+        right: 0;
+        top: 22px;    
+    }
+    25% {
+        right: 11px;
+        top: 22px;
+    }
+    37% {
+        right: 22px;
+        top: 22px;
+    }
+    50% {
+        right: 22px;
+        top: 0;
+    }
+    62% {
+        right: 22px;
+        top: -22px;
+    }
+    75% {
+        right: 11px;
+        top: -22px
+    }
+    87% {
+        right: 11px;
+        top: -11px;
+    }
+    100% {
+        right: 0;
+        top: 0;
+    }
+}
+
+/* Navbar */
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 40px;
+    width: 100%;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+#header .logo img {
+    color: #ffffff;
+    max-height: 40px;
+    font-family: 'Marck Script', cursive;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+
+#header ul li a
+{
+    text-decoration: none; 
+    transition: ease-in-out 0.2s;
+    padding: 6px 15px;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active
+{
+    background: #ffffff;
+    color: #094b65;
+}
+
+/* Buttons */
+.btn {
+    position: relative;
+    display: inline-flex;
+    padding: 10px 30px;
+    background: #094b65;
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: color 0.5s;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: white;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover {
+    color: #094b65;
+}
+
+.btn:hover::before {
+    width: 500px;
+    height: 500px;
+}
+
+/* Contact Form */
+section#contactform {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #112d42;
+}
+
+section#contactform::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background: #094b65;
+}
+
+section#contactform div.container {
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 100;
+    scale: 0.95;
+}
+
+section#contactform div.container div.contactInfo {
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #0f3959;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.296);
+}
+
+section#contactform div.container div.contactInfo h2 {
+    color: white;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+section#contactform div.container div.contactInfo h2::before {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 20%;
+    height: 3px;
+    top: 2.3em;
+    margin-left: 10%;
+}
+
+section#contactform div.container div.contactInfo .info {
+    position: relative;
+    margin: 30px 0px;
+    margin-left: -12px;
+    width: 100%;
+}
+
+section#contactform div.container div.contactInfo .info li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    align-items: flex-start;
+}
+
+section#contactform div.container div.contactInfo .info li span.outer {
+    width: 100%;
+    min-width: 30px;
+    color: white;
+    opacity: 0.5;
+    margin-left: 10px;
+    font-weight: 300;
+    display: flex;
+    transition: 0.5s ease-in-out;
+}
+
+section#contactform div.container div.contactInfo .info li span.outer span.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section#contactform div.container div.contactInfo .info li span.outer span.text {
+    margin-left: 10px;
+}
+
+section#contactform div.container div.contactInfo .info li span.outer span.text p.one {
+    margin-top: 0px;
+}
+
+section#contactform div.container div.contactInfo .info li span.outer span.text p.two {
+    margin-top: 23px;
+}
+
+section#contactform div.container div.contactInfo .info li span.outer span.text p.three {
+    margin-top: 53px;
+}
+
+section#contactform div.container div.contactInfo .info li span.outer:hover {
+    opacity: 1;
+}
+
+section#contactform div.container div.contactInfo .sci {
+    position: relative;
+    display: flex;
+    
+}
+
+section#contactform div.container div.contactInfo .sci li {
+    margin-right: 15px;
+    list-style: none;
+}
+
+section#contactform div.container div.contactInfo .sci li a {
+    text-decoration: none;
+}
+
+section#contactform div.container div.contactInfo .sci li a {
+    color: white;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;;
+}
+
+section#contactform div.container div.contactInfo .sci li:hover a {
+    opacity: 1;
+}
+
+section#contactform div.container div.contactForm {
+    position: absolute;
+    padding: 70px 50px;
+    background: #fff;
+    width: calc(100% - 150px);
+    margin-left: 150px;
+    padding-left: 250px;
+    height: 100%;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.426);
+}
+
+section#contactform div.container div.contactForm h2 {
+    color: #094b65;
+    font-size: 2.5em;
+}
+
+section#contactform div.container div.contactForm h2::before {
+    content: '';
+    position: absolute;
+    background: #094b65;
+    width: 20%;
+    height: 3px;
+    top: 2.74em;
+    margin-left: 15px;
+}
