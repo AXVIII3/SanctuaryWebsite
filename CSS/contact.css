@@ -450,7 +450,7 @@ section#contactform {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: #112d42;
+    background: #091824;
 }
 
 section#contactform::before {
@@ -460,7 +460,7 @@ section#contactform::before {
     left: 0;
     width: 45%;
     height: 100%;
-    background: #094b65;
+    background: #04202c;
 }
 
 section#contactform div.container {
@@ -477,7 +477,9 @@ section#contactform div.container div.contactInfo {
     top: 40px;
     width: 350px;
     height: calc(100% - 80px);
-    background: #0f3959;
+    background-color: #094b656e;
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
     z-index: 1;
     padding: 40px;
     display: flex;
@@ -490,6 +492,7 @@ section#contactform div.container div.contactInfo h2 {
     color: white;
     font-size: 2em;
     font-weight: 500;
+    z-index: 10;
 }
 
 section#contactform div.container div.contactInfo h2::before {
@@ -584,7 +587,9 @@ section#contactform div.container div.contactInfo .sci li:hover a {
 section#contactform div.container div.contactForm {
     position: absolute;
     padding: 70px 50px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.47);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
     width: calc(100% - 150px);
     margin-left: 150px;
     padding-left: 250px;
@@ -593,7 +598,7 @@ section#contactform div.container div.contactForm {
 }
 
 section#contactform div.container div.contactForm h2 {
-    color: #094b65;
+    color: #fff;
     font-size: 2.5em;
     font-weight: 500;
 }
@@ -601,9 +606,103 @@ section#contactform div.container div.contactForm h2 {
 section#contactform div.container div.contactForm h2::before {
     content: '';
     position: absolute;
-    background: #094b65;
+    background: #fff;
     width: 20%;
     height: 3px;
     top: 2.74em;
     margin-left: 15px;
+}
+
+section#contactform div.container div.contactForm div.formBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+section#contactform div.container div.contactForm div.formBox .inputBox {
+    position: relative;
+    margin: 0 0 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+section#contactform div.container div.contactForm div.formBox .w50 {
+    width: 47%;
+}
+
+section#contactform div.container div.contactForm div.formBox .w100 {
+    width: 100%;
+}
+
+section#contactform div.container div.contactForm div.formBox .inputBox input,
+section#contactform div.container div.contactForm div.formBox .inputBox textarea {
+    width: 95% !important;
+    padding: 5px 0;
+    resize: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #c7efff;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    outline: none;
+    transition: 0.5s;
+}
+
+section#contactform div.container div.contactForm div.formBox .inputBox textarea {
+    min-height: 120px;
+}
+
+section#contactform div.container div.contactForm div.formBox .inputBox span {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(224, 224, 224);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+section#contactform div.container div.contactForm div.formBox .inputBox input:focus ~ span,
+section#contactform div.container div.contactForm div.formBox .inputBox textarea:focus ~ span,
+section#contactform div.container div.contactForm div.formBox .inputBox input:valid ~ span,
+section#contactform div.container div.contactForm div.formBox .inputBox textarea:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgb(224, 224, 224);
+}
+
+section#contactform div.container div.contactForm div.formBox .inputBox input:focus,
+section#contactform div.container div.contactForm div.formBox .inputBox textarea:focus,
+section#contactform div.container div.contactForm div.formBox .inputBox input:valid,
+section#contactform div.container div.contactForm div.formBox .inputBox textarea:valid {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 100% !important;
+}
+
+section#contactform div.container div.contactForm div.formBox .inputBox input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    background: white;
+    color: #094b65;
+    border: none;
+    max-width: 150px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+section#contactform div.container div.contactForm div.formBox .inputBox input[type="submit"]:hover {
+    color: white;
+    background-color: #094b65;
 }

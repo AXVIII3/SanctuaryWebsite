@@ -464,7 +464,7 @@ section #text span {
     border-radius: 25px;
     text-decoration: none;
     overflow: hidden;
-    transition: color 0.5s;
+    transition: 0.5s;
 }
 
 #btn span {
@@ -487,6 +487,7 @@ section #text span {
 
 #btn:hover {
     color: #fff;
+    background-color: #094b65;
 }
 
 #btn:hover::before {
