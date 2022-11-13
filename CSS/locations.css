@@ -198,10 +198,15 @@ section#splash div#intro img#logoGraphic {
 }
 
 hr {
-    position: relative;
-    margin-left: 10%;
-    width: 80%;
-    color: white;
+    position: absolute;
+    margin-left: 5%;
+    width: 90%;
+    background-color: white;
+    z-index: 10;
+}
+
+hr.blue {
+    border: 1px solid #094b65;
 }
 
 /* Loader */
@@ -515,7 +520,6 @@ section#landing div#parent {
     padding: 2em 4em;
     border-radius: 10px;
     backdrop-filter: blur(5px);
-    /* box-shadow: 0px 0px 0px 3px rgba(219, 219, 219, 0.381); */
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.437);
     background: #094b6537; 
 }
@@ -633,12 +637,14 @@ section#landing div.container div.element2 {
 
 /* Right Sided Locations */
 section.locationRight {
+    border-top-left-radius: 100% 50%;
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 100px 10vw;
 }
 
 section.locationRight div.container {
@@ -676,6 +682,7 @@ section.locationRight div.img img {
     right: 3em;
     width: 37em;
     height: auto;
+    pointer-events: none;
 }
 
 section.locationRight div.container::before {
@@ -690,12 +697,14 @@ section.locationRight div.container::before {
 
 /* Left Sided Locations */
 section.locationLeft {
+    border-bottom-right-radius: 100% 50%;
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 100px 10vw;
 }
 
 section.locationLeft div.container {
@@ -734,6 +743,7 @@ section.locationLeft div.img img {
     left: 3em;
     width: 37em;
     height: auto;
+    pointer-events: none;
 }
 
 section.locationLeft div.container::before {
@@ -746,8 +756,23 @@ section.locationLeft div.container::before {
     background: #094b65;
 }
 
-a#more {
-   margin-left: 45vw;
+section#morelocations {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.pair1 {
+    background-color: #094b6587;
+    backdrop-filter: blur(5px);
+}
+
+section.pair2 {
+    background-color: #ffffff81;
+    backdrop-filter: blur(5px);
 }
 
 /* Buttons */
@@ -793,7 +818,7 @@ a#more {
 /* Footer */
 #footer {
     position: relative;
-    margin-top: 38px;;
+    margin-top: -40px;
     min-height: 40px;
     width: 100%;
     padding-left: 20px;
