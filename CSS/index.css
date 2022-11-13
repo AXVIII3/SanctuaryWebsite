@@ -34,6 +34,17 @@ body {
     background-color: white;
 }
 
+/* Text Selection */
+::-moz-selection { 
+    color: white;
+    background: #094b65;
+  }
+  
+::selection {
+    color: white;
+    background: #094b65;
+}
+
 /* Splash Screen */
 section#splash {
     width: 100vw;
