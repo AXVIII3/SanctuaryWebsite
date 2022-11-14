@@ -460,7 +460,8 @@ section #text span {
 }
 
 /* Button */
-#btn {
+#btn,
+#btn2 {
     font-size: 1.2em;
     font-weight: 500;
     letter-spacing: 2px;
@@ -478,12 +479,20 @@ section #text span {
     transition: 0.5s;
 }
 
-#btn span {
+#btn2 {
+    transform: translateY(20px);
+    font-size: 17px;
+    box-shadow: none;
+}
+
+#btn span,
+#btn2 span {
     position: relative;
     z-index: 1;
 }
 
-#btn::before {
+#btn::before,
+#btn2::before {
     content: '';
     position: absolute;
     top: 0;
@@ -496,12 +505,18 @@ section #text span {
     transition: width 0.5s, height 0.5s;
 }
 
-#btn:hover {
+#btn:hover,
+#btn2:hover {
     color: #fff;
     background-color: #094b65;
 }
 
-#btn:hover::before {
+#btn2:hover {
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.233);
+}
+
+#btn:hover::before,
+#btn2:hover::before {
     width: 500px;
     height: 500px;
 }

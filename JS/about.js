@@ -19,5 +19,7 @@ window.addEventListener("load", function() {
 
 function deactivateSplash() {
     splash.style.height = '0';
+    splash.style.display = 'none';
     intro.style.display = 'none';
+    document.getElementById('body').style.overflowY = 'scroll';
 }

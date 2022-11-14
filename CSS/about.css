@@ -15,8 +15,9 @@ html {
 }
 
 body {
-    overflow-x: hidden;
-    background: #ffffff;
+    overflow: hidden;
+    background: #094b65;
+    color: white;
     min-height: 100vh;
     scroll-snap-type: y mandatory;
 }
@@ -36,13 +37,13 @@ body {
 
 /* Text Selection */
 ::-moz-selection { 
-    color: white;
-    background: #094b65;
+    background: white;
+    color: #094b65;
   }
   
 ::selection {
-    color: white;
-    background: #094b65;
+    background: white;
+    color: #094b65;
 }
 
   /* Splash Screen */
@@ -352,7 +353,7 @@ section#loader div.loader {
 
 /* Navbar */
 #header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     max-height: 40px;
@@ -361,7 +362,7 @@ section#loader div.loader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10000;
+    z-index: 30000;
 }
 
 #header .logo img {
@@ -440,4 +441,126 @@ section#loader div.loader {
 .btn:hover::before {
     width: 500px;
     height: 500px;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 20vw;
+}
+
+section.dark {
+    background: #001220;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../Images/waves.svg);
+    pointer-events: none;
+}
+
+.spacer2 {
+    background-image: url(../Images/waves2.svg);
+    pointer-events: none;
+}
+
+section div.space {
+    height: 50px;
+    width: 100%;
+}
+
+section div.container {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    max-width: 800px;
+    height: 100%;
+    transform: skewY(-15deg);
+}
+
+section div.container .imgBox {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+}
+
+section div.container .imgBox img {
+    aspect-ratio: 4.33;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    transition: 0.5s;
+    pointer-events: none;
+    margin-bottom: 5px;
+} 
+
+section div.container .imgBox img:nth-child(1) {
+    opacity: 0.2;
+}
+
+section div.container .imgBox img:nth-child(2) {
+    opacity: 0.5;
+}
+
+section div.container .imgBox:hover img:nth-child(2) {
+    transform: translate(50px, -50px);
+}
+
+section div.container .imgBox:hover img:nth-child(3) {
+    transform: translate(100px, -100px);
+}
+
+section div.container h2 {
+    position: relative;
+    color: #ffffff;
+    font-size: 2.5em;
+}
+
+section div.container .skew {
+    transform-origin: top;
+    transform: skew(45deg);
+}
+
+section div.container .skew p {
+    font-size: 1.1em;
+}
+
+section div.container .skew a {
+    position: relative;
+    padding: 10px 30px;
+    display: inline-block;
+    background: transparent;
+    color: white;
+    transform-origin: top;
+    margin-top: 10px;
+    border: 2px solid white;
+    transform: skewX(-45deg);
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+section div.container .skew a:hover {
+    background: #ffffff;
+    color: #094b65;
+}
+
+#footer {
+    min-height: 0px !important;
+    height: 0;
+    margin: 0;
+    padding: 20px;
 }
