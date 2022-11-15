@@ -16,7 +16,6 @@ html {
 
 body {
     overflow: hidden;
-    background: #094b65;
     color: white;
     min-height: 100vh;
 }
@@ -365,7 +364,7 @@ section#loader div.loader {
 }
 
 #header .logo img {
-    color: #ffffff;
+    color: #094b65;
     max-height: 40px;
     font-family: 'Marck Script', cursive;
     font-weight: 700;
@@ -391,15 +390,15 @@ section#loader div.loader {
     text-decoration: none; 
     transition: ease-in-out 0.2s;
     padding: 6px 15px;
-    color: #ffffff;
+    color: #094b65;
     border-radius: 20px;
 }
 
 #header ul li a:hover,
 #header ul li a.active
 {
-    background: #ffffff;
-    color: #094b65;
+    background: #094b65;
+    color: #fff;
 }
 
 /* Buttons */
@@ -441,3 +440,53 @@ section#loader div.loader {
     width: 500px;
     height: 500px;
 }
+
+section.pic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('https://source.unsplash.com/random/1920x1080/?rainforest');
+    background-attachment: fixed;
+    clip-path: circle(0px at center);
+}
+
+section.pic h1 {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 60px;
+    text-shadow: 0 0 20px black;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    margin-top: 200vh;
+    background: #fff;
+    padding: 100px;
+    color: #094b65;
+}
+
+.container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.title {
+    position: relative;
+    top: 40vh;
+    z-index: 1;
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+    color: #094b65;
+}
+
+/*TODO: https://youtu.be/icnZSJbNsEM*/
+/*TODO: https://youtu.be/pKYckdWekv4*/
+/*TODO: https://youtu.be/xDy2UptgdUY*/

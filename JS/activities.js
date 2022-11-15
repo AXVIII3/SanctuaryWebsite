@@ -23,3 +23,11 @@ function deactivateSplash() {
     intro.style.display = 'none';
     document.getElementById('body').style.overflowY = 'scroll';
 }
+
+var section = document.querySelector('.pic');
+var text = section.querySelector('h1');
+window.addEventListener('scroll', function() {
+    var value = window.scrollY;
+    section.style.clipPath = "circle("+ value +"px at center)";
+    text.style.fontSize = (value/3) + "px";
+});
