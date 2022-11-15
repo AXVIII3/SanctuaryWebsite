@@ -19,7 +19,6 @@ body {
     background: #094b65;
     color: white;
     min-height: 100vh;
-    scroll-snap-type: y mandatory;
 }
 
 /* Scrollbar */
@@ -485,7 +484,6 @@ section div.container {
     align-items: left;
     max-width: 800px;
     height: 100%;
-    transform: skewY(-15deg);
 }
 
 section div.container .imgBox {
@@ -493,7 +491,7 @@ section div.container .imgBox {
     width: 100%;
     height: 180px;
     transform-origin: bottom;
-    transform: skewX(45deg);
+    
 }
 
 section div.container .imgBox img {
@@ -531,7 +529,6 @@ section div.container h2 {
 
 section div.container .skew {
     transform-origin: top;
-    transform: skew(45deg);
 }
 
 section div.container .skew p {
@@ -547,7 +544,6 @@ section div.container .skew a {
     transform-origin: top;
     margin-top: 10px;
     border: 2px solid white;
-    transform: skewX(-45deg);
     text-decoration: none;
     letter-spacing: 2px;
     transition: 0.5s;

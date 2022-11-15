@@ -1,3 +1,5 @@
+document.body.style.zoom = "110%" ;
+
 // References to all the images
 let text = document.getElementById("text");
 let bird1 = document.getElementById("bird1");

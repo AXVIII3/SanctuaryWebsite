@@ -17,7 +17,7 @@ html {
 body {
     overflow-x: hidden;
     overflow-y: hidden;
-    background: #ffffff;
+    background: #fff;
     min-height: 100vh;
 }
 
@@ -526,6 +526,7 @@ section #text span {
 .sec {
     position: relative;
     display: flex;
+    height: 100vh
     justify-content: left;
     align-items: center;
     padding: 100px;
@@ -555,9 +556,11 @@ section #text span {
 
 /* Footer */
 footer {
+    overflow: hidden;
     min-height: 40px;
     padding: 10px 30px;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: left;
     background: #094b65;
