@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/activities.css">
+
+    <!-- Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- JS -->
+    <script src="../JS/activities.js" defer></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Title logo -->
+    <link rel = "icon" href = "../Logos/Logo White.png" type = "image/x-icon">
+
+</head>
+<body id="body">
+    <!-- Loader -->
+    <section id="loader">
+        <div class="loader">
+            <div class="squares">
+                <div class="pair1">
+                    <div class="sq1"></div>
+                    <div class="sq3"></div>
+                </div>
+                <div class="pair2">
+                    <div class="sq2"></div>
+                    <div class="sq4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Splash Screen -->
+    <section id="splash">
+        <div id="intro">
+            <img src="../Logos/Written Logo White.png" alt="F&F" id="logo"> 
+            <img src="../Logos/Logo White.png" alt="F&F" id="logoGraphic"> 
+        </div>
+    </section>
+
+    <!-- Navbar -->
+    <header id="header">
+        <a href="../index.html" class="logo"> <img src="../Logos/Written Logo White.png" alt="F&F"/> </a>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="location.html">Locations</a></li>
+            <li><a href="activities.html" class="active">Activities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </header>
+
+    <!-- JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // For pop-in animations
+        AOS.init({
+            offset: -400,
+            duration: 700,
+            easing: 'ease-in-out',
+            mirror: false,
+            once: true
+        });
+    </script>
+</body>
+</html>
