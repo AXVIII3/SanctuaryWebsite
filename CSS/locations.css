@@ -62,7 +62,6 @@ body#body {
 }
 
 #header .logo img {
-    back: #ffffff;
     max-height: 40px;
     font-family: 'Marck Script', cursive;
     font-weight: 700;
